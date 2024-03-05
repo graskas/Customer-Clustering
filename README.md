@@ -10,7 +10,7 @@ The owner of the mall have asked us to use data, and Machine Learning to help se
 
 ## Actions
 
- We need to apply some data pre-processing, that is importing the relevant libraries, importing the data, and making sure that it is clean. The data was loaded using the pandas library and the first few rows were looked at using the head(). I then decided to understand the data by checking the dimension of the data and data types of variables. This allowed me to determine the data type for each variable and then also to have first look at whether there were missing values in the dataset.  The results showed that, there were no missing values. 
+ We need to apply some data pre-processing, that is importing the relevant libraries, importing the data, and making sure that it is clean. The data was loaded using the pandas library and the first few rows were looked at using the head(). I then decided to understand the data by checking the dimension of the data and data types of variables. This allowed me to determine the data type for each variable and then also to have first look at whether there were missing values in the dataset.  The results showed that, there were no missing values. Also, since the features to look at were not given, I decided to use the top two variance to choose my features to maximize intercluster variance and minimize intra-cluster variance
  
  
 The elbow method is then used to help determine the optimal number of clusters as the K-means clustering is an unsupervised learning approach.
