@@ -10,8 +10,16 @@ The owner of the mall have asked us to use data, and Machine Learning to help se
 
 ## Actions
 
- We need to apply some data pre-processing, that is importing the relevant libraries, importing the data, and making sure that it is clean. The data was loaded using the pandas library and the first few rows were looked at using the head(). I then decided to understand the data by checking the dimension of the data and data types of variables. This allowed me to determine the data type for each variable and then also to have first look at whether there were missing values in the dataset.  The results showed that, there were no missing values. Also, since the features to look at were not given, I decided to use the top two variance to choose my features to maximize intercluster variance and minimize intra-cluster variance
+ We need to apply some data pre-processing, that is importing the relevant libraries, importing the data, and making sure that it is clean. The data was loaded using the pandas library and the first few rows were looked at using the head(). I then decided to understand the data by checking the dimension of the data and data types of variables. This allowed me to determine the data type for each variable and then also to have first look at whether there were missing values in the dataset.  The results showed that, there were no missing values. Also, since the features to look at were not given, I decided to use the top two variance to choose my features to maximize intercluster variance and minimize intra-cluster variance. 
+
+ The data was then scaled by standardization to make sure the features are in the same scale. 
  
  
 The elbow method is then used to help determine the optimal number of clusters as the K-means clustering is an unsupervised learning approach.
-Based upon iterative testing using Within Cluster Sum of Squares(WCSS) and the elbow method, a customer segmentation with 4 clusters was settled on. The data was then trained on this number of clusters to determine how customers are segmented.
+Based upon iterative testing using Within Cluster Sum of Squares(WCSS) and the elbow method at cluster 3, we had the WCSS to stop falling at that point (that is, we want lower WCSS or inertia errors). The Silhouette was then used to verify this results (we want a Silhouette score closer to 1) and it was between 3 clusters or 4 but 3 clusters is same as that of the Elbow method. A customer segmentation with 3 clusters was settled on. 
+
+
+The data was then trained on this number of clusters to determine how customers are segmented using the KMeans algorithm.
+
+## Conclusions
+It was seen that, individuals older tend to spend more overall than those who are young. The company can bring incentives or promotional packages to individuals who are older in order to encourage them to spend more and also discount to items that are purchased by the younger ones to encourage their spending habits
